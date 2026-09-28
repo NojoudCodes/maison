@@ -1,16 +1,93 @@
-# React + Vite
+# Maison
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern storefront web app built with React 19, Vite and Tailwind CSS. Maison features a home page for browsing and a checkout page, with client-side routing and lightweight global state management.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Home page and checkout flow with client-side routing
+- Shared navigation bar across all pages
+- Global state management with Zustand
+- Utility-first styling with Tailwind CSS v4
+- Icon set from React Icons
+- Fast development with Vite and Hot Module Replacement
+- ESLint with React Hooks and React Refresh rules
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Category | Technology |
+| --- | --- |
+| UI library | [React 19](https://react.dev/) |
+| Build tool | [Vite](https://vitejs.dev/) |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com/) |
+| Routing | [React Router](https://reactrouter.com/) |
+| State management | [Zustand](https://zustand.docs.pmnd.rs/) |
+| Icons | [React Icons](https://react-icons.github.io/react-icons/) |
+| Linting | [ESLint](https://eslint.org/) |
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 20.19 or later
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/NojoudCodes/maison.git
+cd maison
+npm install
+```
+
+### Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server at `http://localhost:5173` |
+| `npm run build` | Create an optimized production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint across the project |
+
+## Routes
+
+| Path | Page |
+| --- | --- |
+| `/` | Home |
+| `/checkout` | Checkout |
+
+## Project Structure
+
+```
+maison/
+├── src/
+│   ├── components/
+│   │   └── layouts/
+│   │       └── Navbar.jsx    # Site-wide navigation
+│   ├── pages/
+│   │   ├── Home.jsx          # Landing / product browsing page
+│   │   └── Checkout.jsx      # Checkout page
+│   ├── App.jsx               # Route definitions
+│   └── App.css
+├── index.html                # HTML entry point
+├── vite.config.js            # Vite + Tailwind configuration
+├── eslint.config.js          # ESLint configuration
+└── package.json
+```
+
+## Contributing
+
+Contributions, issues and feature requests are welcome.
+
+1. Fork the repository
+2. Create your branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add your feature"`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+**Nojoud**: [@NojoudCodes](https://github.com/NojoudCodes)
